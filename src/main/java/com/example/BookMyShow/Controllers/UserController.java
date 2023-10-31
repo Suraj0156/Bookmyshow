@@ -1,6 +1,7 @@
 package com.example.BookMyShow.Controllers;
 
 import com.example.BookMyShow.Models.User;
+import com.example.BookMyShow.RequestDtos.AddUserRequest;
 import com.example.BookMyShow.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -18,9 +19,9 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/add")
-    public ResponseEntity addUser(@RequestBody User user) {
+    public ResponseEntity addUser(@RequestBody AddUserRequest addUserRequest) {
 
-        String result = userService.addUser(user);
+        String result = userService.addUser(addUserRequest);
         return new ResponseEntity(result, HttpStatus.OK);
 
     }
