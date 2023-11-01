@@ -5,7 +5,9 @@ import com.example.BookMyShow.Repository.MovieRepository;
 import com.example.BookMyShow.RequestDtos.AddMovieRequest;
 import com.example.BookMyShow.Transformers.MovieTransformer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class MovieService {
     @Autowired
     private MovieRepository movieRepository;
